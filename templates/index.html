@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BioVeritas</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        textarea { width: 100%; }
+        .result { margin: 5px 0; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<h1>🧠 BioVeritas - Medical Credibility Checker</h1>
+
+<form method="POST">
+    <textarea name="article" rows="10" placeholder="Paste medical content here..."></textarea>
+    <br><br>
+    <button type="submit">Analyze</button>
+</form>
+
+<hr>
+
+{% if results and results|length > 0 %}
+    <h2>Results:</h2>
+    {% for r in results %}
+        <p class="result" style="color: {{r.color}}">
+            {{r.sentence}} → {{r.score}}
+        </p>
+    {% endfor %}
+{% else %}
+    <p>No results yet. Enter text and click Analyze.</p>
+{% endif %}
+
+</body>
+</html>
