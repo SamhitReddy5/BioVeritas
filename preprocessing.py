@@ -3,7 +3,6 @@ from nltk.corpus import stopwords
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.stem import WordNetLemmatizer
 
-# download once
 try:
     nltk.data.find('tokenizers/punkt')
 except:
