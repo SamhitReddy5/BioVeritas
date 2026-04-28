@@ -20,21 +20,16 @@ def index():
                 prob = probs[i]
                 extra = verification_score(processed[i])
 
-                # 🔥 BALANCED SCORING
                 score = prob
 
-                # apply reduced penalty (not too harsh)
                 if extra < 0:
                     score += extra * 0.6
 
-                # small boost for strong predictions
                 if prob > 0.65:
                     score += 0.1
 
-                # clamp score between 0 and 1
                 score = max(0, min(score, 1))
 
-                # 🎯 FINAL THRESHOLDS
                 if score < 0.4:
                     color = "red"
                 elif score < 0.6:
