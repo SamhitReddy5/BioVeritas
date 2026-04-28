@@ -1,4 +1,3 @@
-# FAST VERSION — no API lag for demo
 
 def verification_score(sentence):
     sentence = sentence.lower()
@@ -12,6 +11,6 @@ def verification_score(sentence):
 
     for word in fake_keywords:
         if word in sentence:
-            score -= 0.25  # strong penalty
+            score -= 0.25  
 
     return score
