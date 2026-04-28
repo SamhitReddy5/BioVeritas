@@ -10,7 +10,6 @@ def train_model():
     X = vectorizer.fit_transform(df["text"])
     y = df["label"]
 
-    # IMPORTANT FIX
     model = LogisticRegression(class_weight='balanced', max_iter=1000)
     model.fit(X, y)
 
