@@ -30,6 +30,7 @@ BioVeritas is an AI-powered system that evaluates the credibility of medical con
 
 ## Project Structure
 
+```text
 BioVeritas/
 ├── app.py
 ├── model.py
@@ -48,6 +49,7 @@ BioVeritas/
 │   ├── UI.png
 │   ├── Content.png
 │   └── Result.png
+```
 
 ---
 
